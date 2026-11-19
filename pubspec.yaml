@@ -45,7 +45,7 @@ dependencies:
   cached_network_image: ^3.4.1
   carousel_slider: ^5.0.0
   font_awesome_flutter: ^10.7.0
-  google_fonts: ^6.2.1
+  google_fonts: ^6.3.3
   shimmer: ^3.0.0
 
 dev_dependencies:
