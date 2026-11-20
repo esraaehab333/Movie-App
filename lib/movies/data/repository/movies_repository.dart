@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:move_app/core/error/excption.dart';
+import 'package:move_app/core/error/exception.dart';
 import 'package:move_app/core/error/failure.dart';
 import 'package:move_app/movies/data/datasource/movie_remote_data_source.dart';
 import 'package:move_app/movies/domain/entites/movie.dart';
@@ -16,9 +16,8 @@ class MoviesRepository extends BaseMoviesRepo {
 
   @override
   Future<Either<Failure, List<Movie>>> getNowPlayingMovies() async {
-    final result = await baseMovieRemoteDataSource.getNowPlayingMovies();
-
     try {
+      final result = await baseMovieRemoteDataSource.getNowPlayingMovies();
       return Right(result);
     } on ServerException catch (failure) {
       return Left(
@@ -29,9 +28,8 @@ class MoviesRepository extends BaseMoviesRepo {
 
   @override
   Future<Either<Failure, List<Movie>>> getPopularMovies() async {
-    final result = await baseMovieRemoteDataSource.getPopularMovies();
-
     try {
+      final result = await baseMovieRemoteDataSource.getPopularMovies();
       return Right(result);
     } on ServerException catch (failure) {
       return Left(
@@ -42,9 +40,8 @@ class MoviesRepository extends BaseMoviesRepo {
 
   @override
   Future<Either<Failure, List<Movie>>> getTopRatedMovies() async {
-    final result = await baseMovieRemoteDataSource.getTopRatedMovies();
-
     try {
+      final result = await baseMovieRemoteDataSource.getTopRatedMovies();
       return Right(result);
     } on ServerException catch (failure) {
       return Left(
@@ -56,9 +53,8 @@ class MoviesRepository extends BaseMoviesRepo {
   @override
   Future<Either<Failure, MovieDetail>> getMovieDetails(
       MovieDetailsParameters para) async {
-    final result = await baseMovieRemoteDataSource.getMovieDetails(para);
-
     try {
+      final result = await baseMovieRemoteDataSource.getMovieDetails(para);
       return Right(result);
     } on ServerException catch (failure) {
       return Left(
@@ -70,9 +66,8 @@ class MoviesRepository extends BaseMoviesRepo {
   @override
   Future<Either<Failure, List<Recommendation>>> getRecommendation(
       RecommendationParameters parameters) async {
-    final result =
-        await baseMovieRemoteDataSource.getRecommendation(parameters);
     try {
+      final result = await baseMovieRemoteDataSource.getRecommendation(parameters);
       return Right(result);
     } on ServerException catch (failure) {
       return Left(ServerFailure(

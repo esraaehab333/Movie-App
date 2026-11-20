@@ -19,90 +19,86 @@ class MainMoviesScreen extends StatelessWidget {
         ..add(GetPopularMoviesEvent())
         ..add(GetTopRatedMoviesEvent()),
       child: Scaffold(
-        backgroundColor: Colors.grey.shade600,
         body: SingleChildScrollView(
           key: const Key('movieScrollView'),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const NowPlayingComponent(),
-              Container(
-                margin: const EdgeInsets.fromLTRB(16.0, 24.0, 16.0, 8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Popular",
-                      style: GoogleFonts.poppins(
-                        fontSize: 19,
-                        fontWeight: FontWeight.w500,
-                        letterSpacing: 0.15,
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        /// TODO : NAVIGATION TO POPULAR SCREEN
-                      },
-                      child: const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Text('See More'),
-                            Icon(
-                              Icons.arrow_forward_ios,
-                              size: 16.0,
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+              _SectionHeader(
+                title: 'Popular',
+                onSeeMoreTap: () {
+                  /// TODO : NAVIGATION TO POPULAR SCREEN
+                },
               ),
               const PopularComponent(),
-              Container(
-                margin: const EdgeInsets.fromLTRB(
-                  16.0,
-                  24.0,
-                  16.0,
-                  8.0,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Top Rated",
-                      style: GoogleFonts.poppins(
-                        fontSize: 19,
-                        fontWeight: FontWeight.w500,
-                        letterSpacing: 0.15,
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        /// TODO : NAVIGATION TO Top Rated Movies Screen
-                      },
-                      child: const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Text('See More'),
-                            Icon(
-                              Icons.arrow_forward_ios,
-                              size: 16.0,
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+              _SectionHeader(
+                title: 'Top Rated',
+                onSeeMoreTap: () {
+                  /// TODO : NAVIGATION TO Top Rated Movies Screen
+                },
               ),
               const TopRatedComponent(),
               const SizedBox(height: 50.0),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _SectionHeader extends StatelessWidget {
+  final String title;
+  final VoidCallback onSeeMoreTap;
+
+  const _SectionHeader({
+    required this.title,
+    required this.onSeeMoreTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final accent = Theme.of(context).colorScheme.primary;
+
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16.0, 24.0, 8.0, 8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              Container(
+                width: 4.0,
+                height: 22.0,
+                decoration: BoxDecoration(
+                  color: accent,
+                  borderRadius: BorderRadius.circular(2.0),
+                ),
+              ),
+              const SizedBox(width: 10.0),
+              Text(
+                title,
+                style: GoogleFonts.poppins(
+                  fontSize: 19,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 0.15,
+                ),
+              ),
+            ],
+          ),
+          TextButton(
+            onPressed: onSeeMoreTap,
+            child: const Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text('See More'),
+                SizedBox(width: 4.0),
+                Icon(Icons.arrow_forward_ios, size: 14.0),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
