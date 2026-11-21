@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:move_app/core/error/failure.dart';
 import 'package:move_app/core/usecase/base_usecase.dart';
-import 'package:move_app/movies/domain/entites/recommendatoin.dart';
+import 'package:move_app/movies/domain/entities/recommendatoin.dart';
 import 'package:move_app/movies/domain/repository/base_movies_repo.dart';
 
 class GetRecommendationUseCase

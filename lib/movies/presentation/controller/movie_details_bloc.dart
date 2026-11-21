@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:move_app/core/utils/enum.dart';
-import 'package:move_app/movies/domain/entites/movie_detail.dart';
-import 'package:move_app/movies/domain/entites/recommendatoin.dart';
+import 'package:move_app/movies/domain/entities/movie_detail.dart';
+import 'package:move_app/movies/domain/entities/recommendatoin.dart';
 import 'package:move_app/movies/domain/usecase/get_movie_details_usecase.dart';
 import 'package:move_app/movies/domain/usecase/get_recommendation_usecase.dart';
 

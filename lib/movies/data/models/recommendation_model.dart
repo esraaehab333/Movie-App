@@ -1,4 +1,4 @@
-import 'package:move_app/movies/domain/entites/recommendatoin.dart';
+import 'package:move_app/movies/domain/entities/recommendatoin.dart';
 
 class RecommendationModel extends Recommendation {
   const RecommendationModel({

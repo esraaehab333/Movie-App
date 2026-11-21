@@ -2,7 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:move_app/core/utils/app_constances.dart';
-import 'package:move_app/movies/domain/entites/movie.dart';
+import 'package:move_app/movies/domain/entities/movie.dart';
 import 'package:move_app/movies/presentation/screens/movie_detail_screen.dart';
 import 'package:shimmer/shimmer.dart';
 

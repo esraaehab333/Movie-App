@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:move_app/movies/domain/entites/genres.dart';
+import 'package:move_app/movies/domain/entities/genres.dart';
 
 class MovieDetail extends Equatable {
   final String backdropPath;
