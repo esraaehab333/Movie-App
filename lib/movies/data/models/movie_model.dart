@@ -1,4 +1,4 @@
-import 'package:move_app/movies/domain/entites/movie.dart';
+import 'package:move_app/movies/domain/entities/movie.dart';
 
 class MovieModel extends Movie {
   const MovieModel({
@@ -8,16 +8,18 @@ class MovieModel extends Movie {
     required super.genreIds,
     required super.overview,
     required super.voteAverage,
-    required super.relaesDate,
+    required super.releaseDate,
   });
 
   factory MovieModel.fromJson(Map<String, dynamic> json) => MovieModel(
         id: json["id"],
-        title: json["title"],
-        backdropPath: json["backdrop_path"],
-        genreIds: List<int>.from(json["genre_ids"].map((e) => e)),
-        overview: json["overview"],
-        voteAverage: json["vote_average"].toDouble(),
-        relaesDate: json["release_date"],
+        title: json["title"] ?? "",
+        backdropPath: json["backdrop_path"] ?? "",
+        genreIds: json["genre_ids"] != null
+            ? List<int>.from(json["genre_ids"].map((e) => e))
+            : [],
+        overview: json["overview"] ?? "",
+        voteAverage: (json["vote_average"] as num?)?.toDouble() ?? 0.0,
+        releaseDate: json["release_date"] ?? "",
       );
 }

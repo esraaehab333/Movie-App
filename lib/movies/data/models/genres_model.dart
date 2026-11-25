@@ -1,4 +1,4 @@
-import 'package:move_app/movies/domain/entites/genres.dart';
+import 'package:move_app/movies/domain/entities/genres.dart';
 
 class GenresModel extends Genres {
   const GenresModel({

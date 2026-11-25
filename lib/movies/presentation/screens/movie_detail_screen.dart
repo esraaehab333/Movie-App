@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:move_app/core/services/services_locator.dart';
 import 'package:move_app/core/utils/app_constances.dart';
 import 'package:move_app/core/utils/enum.dart';
-import 'package:move_app/movies/domain/entites/movie_detail.dart';
+import 'package:move_app/movies/domain/entities/movie_detail.dart';
 import 'package:move_app/movies/presentation/controller/movie_details_bloc.dart';
 import 'package:shimmer/shimmer.dart';
 

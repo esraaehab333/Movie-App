@@ -1,4 +1,4 @@
-import 'package:move_app/movies/domain/entites/movie.dart';
+import 'package:move_app/movies/domain/entities/movie.dart';
 
 List<Movie> moviesList = [
   const Movie(
@@ -11,7 +11,7 @@ List<Movie> moviesList = [
     id: 453395,
     overview:
         "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-    relaesDate: "2022-05-04",
+    releaseDate: "2022-05-04",
     title: "Movie Title",
     voteAverage: 5.0,
   ),
@@ -25,7 +25,7 @@ List<Movie> moviesList = [
     id: 453395,
     overview:
         "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-    relaesDate: "2022-05-04",
+    releaseDate: "2022-05-04",
     title: "Movie Title",
     voteAverage: 5.0,
   ),
@@ -39,7 +39,7 @@ List<Movie> moviesList = [
     id: 453395,
     overview:
         "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-    relaesDate: "2022-05-04",
+    releaseDate: "2022-05-04",
     title: "Movie Title",
     voteAverage: 5.0,
   ),
@@ -53,7 +53,7 @@ List<Movie> moviesList = [
     id: 453395,
     overview:
         "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-    relaesDate: "2022-05-04",
+    releaseDate: "2022-05-04",
     title: "Movie Title",
     voteAverage: 5.0,
   ),
@@ -67,7 +67,7 @@ List<Movie> moviesList = [
     id: 453395,
     overview:
         "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-    relaesDate: "2022-05-04",
+    releaseDate: "2022-05-04",
     title: "Movie Title",
     voteAverage: 5.0,
   ),
@@ -81,7 +81,7 @@ List<Movie> moviesList = [
     id: 453395,
     overview:
         "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-    relaesDate: "2022-05-04",
+    releaseDate: "2022-05-04",
     title: "Movie Title",
     voteAverage: 5.0,
   ),
